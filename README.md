@@ -75,6 +75,14 @@ input
 
 ## Executando script principal
 
+Antes de tudo, garanta que está de acordo com as dependências necessárias executando o seguinte comando na raiz do projeto:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ./util/requirements.txt
+```
+
 Tendo garantindo que o diretório **input** siga os moldes, basta executar o _script bash.
 
 Você precisará passar três informações como argumento:
@@ -99,7 +107,7 @@ Agora basta executar o script_bash:
 
 **Guilherme Noronha**, graduando em Ciência da Computação na Universidade Federal de Campina Grande (UFCG).
 
- - [guinoronhaf](https://github.com/guinoronhaf).
+ - [guinoronhaf](https://github.com/guinoronhaf)
  - [guilhermenf](https://huggingface.co/guilhermenf)
  - [Guilherme Fragoso](https://www.linkedin.com/in/guilherme-noronha-fragoso/)
 
