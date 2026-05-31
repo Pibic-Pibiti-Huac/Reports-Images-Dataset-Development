@@ -30,7 +30,7 @@ if __name__ == '__main__':
                     full_output_file_path = os.path.join(full_output_dir_path, "report.txt")
 
                     with open(full_output_file_path, "w") as file:
-                        file.write(filtered_text)
+                        file.write(filtered_text if filtered_text else "None")
                     file.close()
                 # ============
                 # === IMAGES ===
