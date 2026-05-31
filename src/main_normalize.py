@@ -1,4 +1,3 @@
-import sys
 import os
 import src.util.pdf_util as putil
 import src.util.dcm_util as dutil
@@ -11,7 +10,8 @@ if __name__ == '__main__':
 
     try:
         # Diretórios de input e output recebidos da linha de comando
-        input_dir, output_dir = str(sys.argv[1]), str(sys.argv[2])
+        input_dir = "./data/input/"
+        output_dir = "./data/output/"
         
         for dir in os.listdir(input_dir): # Itera por cada diretório (paciente) no input_dir
             full_input_dir_path = os.path.join(input_dir, dir) # path completo do diretório

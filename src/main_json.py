@@ -17,7 +17,8 @@ def encode_image(file_path) -> str:
 
 if __name__ == "__main__":
     try:
-        input_dir, output_dir = str(sys.argv[1]), str(sys.argv[2])
+        input_dir = "./data/output/"
+        output_file_path = sys.argv[1]
 
         json_list = list()
         serial_id = 0
@@ -44,16 +45,15 @@ if __name__ == "__main__":
 
                     report_data["report"] = report_content
 
-                elif file_name.lower() == "pa.png":
+                elif file_name.lower().strip() == "pa.png":
                     image_code = encode_image(full_file_path)
                     report_data["pa_image"] = image_code
-                elif file_name.lower() == "perfil.png":
+                elif file_name.lower().strip() == "perfil.png":
                     image_code = encode_image(full_file_path)
                     report_data["perfil_image"] = image_code
 
             json_list.append(report_data)
 
-        output_file_path = os.path.join(output_dir, "reports_images.json")
 
         with open(output_file_path, "w") as json_file:
             json.dump(json_list, json_file, indent=4, ensure_ascii=False)
